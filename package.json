@@ -23,7 +23,6 @@
     "db:studio": "prisma studio --schema=src/lib/prisma/schema.prisma",
     "db:push": "prisma db push --schema=src/lib/prisma/schema.prisma",
     "db:seed": "ts-node src/lib/prisma/seed.ts",
-    "execute:tx": "ts-node-dev src/scripts/executeTransaction.ts",
     "prepare": "husky"
   },
   "dependencies": {
