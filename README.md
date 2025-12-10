@@ -1,5 +1,5 @@
 # Arbitrum SDK API
-
+[![CI](https://github.com/kevinb1003/arbitrum-task/actions/workflows/ci.yaml/badge.svg)](https://github.com/kevinb1003/arbitrum-task/actions/workflows/ci.yaml)
 Node.js TypeScript service for generating Arbitrum deposit/withdrawal payloads. Uses Arbitrum SDK + ethers to build tx data for clients.
 
 ## Table of Contents
