@@ -15,6 +15,7 @@ Node.js TypeScript service for generating Arbitrum deposit/withdrawal payloads. 
 - [Developer Notes](#developer-notes)
   - [Application Architecture](#application-architecture)
     - [Middleware Stack](#middleware-stack)
+    - [Request Flow](#request-flow)
     - [System Diagram](#system-diagram)
 
 ## Prerequisites
