@@ -8,7 +8,7 @@ import { limiter } from './middleware/rate-limit'
 import { responseFormatter } from './middleware/response'
 import { PORT } from './constants'
 
-const run = async () => {
+const run = () => {
   const logger = createLogger('server')
   const app = express()
   const router = express.Router()
