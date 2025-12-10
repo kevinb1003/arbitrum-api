@@ -1,0 +1,68 @@
+{
+  "name": "arbitrum-sdk-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "format:check": "bun run lint && bunx prettier --check .",
+    "format:fix": "bun run lint --fix && bunx prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "db:generate": "prisma generate --schema=src/lib/prisma/schema.prisma",
+    "db:migrate": "prisma migrate dev --schema=src/lib/prisma/schema.prisma",
+    "db:migrate:deploy": "prisma migrate deploy --schema=src/lib/prisma/schema.prisma",
+    "db:migrate:reset": "prisma migrate reset --schema=src/lib/prisma/schema.prisma",
+    "db:studio": "prisma studio --schema=src/lib/prisma/schema.prisma",
+    "db:push": "prisma db push --schema=src/lib/prisma/schema.prisma",
+    "db:seed": "ts-node src/lib/prisma/seed.ts",
+    "execute:tx": "ts-node-dev src/scripts/executeTransaction.ts",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@arbitrum/sdk": "4.0.0",
+    "@prisma/adapter-pg": "7.1.0",
+    "@prisma/client": "7.1.0",
+    "memjs": "1.3.0",
+    "body-parser": "2.2.1",
+    "dotenv": "16.4.5",
+    "ethers": "5.7.2",
+    "express": "5.2.1",
+    "express-rate-limit": "8.2.1",
+    "helmet": "8.1.0",
+    "pg": "8.16.3",
+    "prisma": "7.1.0",
+    "superstruct": "2.0.2",
+    "winston": "3.19.0"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/node": "24.10.1",
+    "@types/pg": "8.15.6",
+    "@types/supertest": "2.0.16",
+    "@types/winston": "2.4.4",
+    "@vitest/coverage-istanbul": "4.0.15",
+    "eslint": "9.39.1",
+    "globals": "16.5.0",
+    "husky": "9.1.7",
+    "prettier": "3.7.4",
+    "supertest": "6.3.3",
+    "ts-node": "10.9.2",
+    "ts-node-dev": "2.0.0",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.46.4",
+    "vitest": "4.0.15"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
