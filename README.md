@@ -1,4 +1,5 @@
 # Arbitrum SDK API
+
 [![CI](https://github.com/kevinb1003/arbitrum-task/actions/workflows/ci.yaml/badge.svg)](https://github.com/kevinb1003/arbitrum-task/actions/workflows/ci.yaml)
 
 Node.js TypeScript service for generating Arbitrum deposit/withdrawal payloads. Uses Arbitrum SDK + ethers to build tx data for clients.
@@ -14,6 +15,7 @@ Node.js TypeScript service for generating Arbitrum deposit/withdrawal payloads. 
   - [Bridge](#bridge)
   - [Health Checks](#health-checks)
 - [Developer Notes](#developer-notes)
+  - [Project Structure](#project-structure)
   - [Application Architecture](#application-architecture)
     - [Middleware Stack](#middleware-stack)
     - [Request Flow](#request-flow)
@@ -172,6 +174,27 @@ Notes:
 `GET /` — basic service info.
 
 ## Developer Notes
+
+### Project Structure
+
+```
+arbitrum-task/
+├── src/
+│   ├── index.ts                # HTTP server entrypoint
+│   ├── constants.ts            # Config constants and defaults
+│   ├── lib/                    # Shared libs (cache, logger, prisma, ethers)
+│   ├── middleware/             # Express middleware (auth, rate-limit, response)
+│   ├── routes/                 # Route registration
+│   ├── handlers/               # Request handlers
+│   ├── services/               # Domain services (Arbitrum bridge logic)
+│   ├── validation/             # Request schemas (superstruct)
+│   ├── types/                  # Type declarations and module shims
+│   └── test/                   # Vitest tests (handlers, services, middleware)
+├── prisma.config.ts            # Prisma CLI config
+├── tsconfig.json               # TypeScript config
+├── vitest.config.ts            # Test runner config
+└── .github/workflows/ci.yaml   # CI workflow
+```
 
 ### Application Architecture
 
