@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@arbitrum/sdk": "4.0.4",
-    "@prisma/adapter-pg": "7.1.0",
+    "@prisma/adapter-pg": "7.2.0",
     "@prisma/client": "7.1.0",
     "memjs": "1.3.2",
     "body-parser": "2.2.1",
