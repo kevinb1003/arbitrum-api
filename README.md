@@ -38,8 +38,8 @@ These steps get you running locally for development and testing.
 
 1. Clone the repo:
    ```sh
-   git clone git@github.com:kevinb1003/arbitrum-task.git
-   cd arbitrum-task
+   git clone git@github.com:kevinb1003/arbitrum-api.git
+   cd arbitrum-api
    ```
 2. Install dependencies:
    ```sh
