@@ -36,7 +36,7 @@
     "express": "5.2.1",
     "express-rate-limit": "8.2.1",
     "helmet": "8.1.0",
-    "pg": "8.16.3",
+    "pg": "8.17.0",
     "prisma": "7.1.0",
     "superstruct": "2.0.2",
     "winston": "3.19.0"
@@ -44,7 +44,7 @@
   "devDependencies": {
     "@types/express": "5.0.6",
     "@types/node": "24.10.1",
-    "@types/pg": "8.15.6",
+    "@types/pg": "8.16.0",
     "@types/supertest": "2.0.16",
     "@types/winston": "2.4.4",
     "@vitest/coverage-istanbul": "4.0.15",
